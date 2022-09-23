@@ -1,0 +1,100 @@
+.subscribe {
+}
+
+.features {
+  margin-top: $gutter * 10;
+
+  &.alignCenter {
+    text-align: center;
+  }
+
+  > div.shine {
+    height: 450px;
+    background: url("/images/shine.jpg") center bottom no-repeat;
+    background-size: 100%;
+  }
+  > div.perf {
+    height: 780px;
+    background: url("/images/performance.jpg") center bottom no-repeat;
+    background-size: 100%;
+  }
+
+  .content {
+    max-width: $md;
+  }
+
+  .title {
+    max-width: $md;
+    margin: auto;
+    margin-bottom: $gutter * 4;
+    font-weight: $fontWeightBold;
+  }
+
+  p {
+    max-width: $lg;
+    margin: auto;
+    margin-bottom: $gutter * 8;
+    color: $textColorLight;
+    font-size: $fontSizeXL;
+    line-height: 42px;
+  }
+
+  figure {
+    margin-bottom: $gutter * 10;
+  }
+
+  h6 {
+    margin-bottom: $gutter * 5;
+  }
+
+  ul {
+    margin-bottom: $gutter * 7;
+    margin-left: $gutter * 20;
+    text-align: left;
+    list-style-type: disc;
+    list-style-position: inside;
+
+    li {
+      padding: $gutter 0;
+      color: $textColorLight;
+      font-size: $fontSizeXL;
+    }
+  }
+
+  .strip {
+    padding: $gutter * 6;
+    background-color: $accentColor;
+    color: $white;
+    font-size: $fontSizeH5;
+    font-weight: $fontWeightBold;
+    text-align: center;
+  }
+}
+
+.review {
+  padding: $gutter * 10;
+  background: #fef9f1;
+  text-align: center;
+
+  .rating {
+    padding-bottom: $gutter * 5;
+    color: #e28f44;
+    font-size: $fontSizeH5;
+  }
+
+  p {
+    margin-bottom: $gutter * 4;
+    color: $textColorLight;
+    font-size: $fontSizeH6;
+    line-height: 120%;
+  }
+
+  .reviewer {
+    color: $textColor;
+    font-size: $fontSizeH5;
+
+    span {
+      color: $textColorLight;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  padding: $gutter * 5;
+  background-color: $white;
+  color: $primaryColor;
+  font-size: $fontSizeXL;
+  font-weight: $fontWeightBold;
+}
+
+.footer {
+  padding: $gutter * 10;
+  background-color: darken($primaryColor, 30%);
+  text-align: center;
+
+  .title {
+    color: $white;
+    line-height: 120%;
+  }
+
+  p {
+    margin-bottom: $gutter * 6;
+    color: $white;
+    font-size: $fontSizeXL;
+  }
+
+  .copy {
+    color: $white;
+    font-size: $fontSizeL;
+  }
+}

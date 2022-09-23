@@ -1,0 +1,18 @@
+.form {
+  display: inline-block;
+
+  form {
+    margin-bottom: $gutter * 6;
+
+    input {
+      margin-right: $gutter;
+      margin-bottom: $gutter * 2;
+    }
+
+    button {
+      @include btnPrimary();
+      display: block;
+      margin: auto;
+    }
+  }
+}
