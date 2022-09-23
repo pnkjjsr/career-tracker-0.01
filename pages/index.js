@@ -51,7 +51,7 @@ export default function Home() {
             <div className={`container ${s.perf}`}>
 
               <h3 className={s.title}>Unlock the Tools that will Turn you into your a super performer!</h3>
-              <p>This tool has been designed in consultation with HR, managers leading large teams and head of IT firms. We have put everything that managers want to see in their team's work.</p>
+              <p>This tool has been designed in consultation with HR, managers leading large teams and head of IT firms. We have put everything that managers want to see in their team&apos;s work.</p>
 
               <ul>
                 <li>Get that hike that you deserve</li>
