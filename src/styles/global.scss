@@ -151,21 +151,21 @@ body {
 h1 {
   margin-bottom: $gutter * 3;
   font-family: $fontFamilyHeading;
-  font-size: $fontSizeH1;
+  font-size: $fontSizeH1/1.5;
   font-weight: $fontWeightLight;
 }
 
 h2 {
   margin-bottom: $gutter * 3;
   font-family: $fontFamilyHeading;
-  font-size: $fontSizeH2;
+  font-size: $fontSizeH2/1.5;
   font-weight: $fontWeightBlack;
 }
 
 h3 {
   margin-bottom: $gutter * 3;
   font-family: $fontFamilyHeading;
-  font-size: $fontSizeH3;
+  font-size: $fontSizeH3/1.5;
   font-weight: $fontWeightBold;
   line-height: 130%;
 }
@@ -173,14 +173,14 @@ h3 {
 h4 {
   margin-bottom: $gutter * 2;
   font-family: $fontFamilyHeading;
-  font-size: $fontSizeH4;
+  font-size: $fontSizeH4/1.5;
   font-weight: $fontWeightBold;
 }
 
 h5 {
   margin-bottom: $gutter * 2;
   font-family: $fontFamilyHeading;
-  font-size: $fontSizeH5;
+  font-size: $fontSizeH5/1.5;
   font-weight: $fontWeightBold;
 }
 
@@ -189,6 +189,27 @@ h6 {
   font-family: $fontFamilyHeading;
   font-size: $fontSizeH6;
   font-weight: $fontWeightBold;
+}
+
+@include media-breakpoint-up(md) {
+  h1 {
+    font-size: $fontSizeH1;
+  }
+  h2 {
+    font-size: $fontSizeH2;
+  }
+  h3 {
+    font-size: $fontSizeH3;
+  }
+  h4 {
+    font-size: $fontSizeH4;
+  }
+  h5 {
+    font-size: $fontSizeH5;
+  }
+  h6 {
+    font-size: $fontSizeH6;
+  }
 }
 
 a {

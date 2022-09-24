@@ -42,7 +42,7 @@ export default function Home() {
 
               <h6>We only take limited members every week, hurry get your access now</h6>
 
-              <form>Form</form>
+              <FormSubscribe />
 
             </div>
           </section>

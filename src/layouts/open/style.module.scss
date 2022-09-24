@@ -7,13 +7,19 @@
 }
 
 .footer {
-  padding: $gutter * 10;
+  padding: $gutter * 3;
+  @include media-breakpoint-up(sm) {
+    padding: $gutter * 10;
+  }
   background-color: darken($primaryColor, 30%);
   text-align: center;
 
   .title {
     color: $white;
     line-height: 120%;
+    // @include media-breakpoint-up(sm) {
+    //   font-size: $fontSizeXL;
+    // }
   }
 
   p {
