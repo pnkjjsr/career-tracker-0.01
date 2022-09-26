@@ -6,10 +6,26 @@
   font-weight: $fontWeightBold;
 }
 
+.main {
+  position: relative;
+  z-index: $indexMain;
+  margin-bottom: $heightFooter;
+  background-color: $bgBody;
+
+  &.access {
+    margin-bottom: $heightFooterSm;
+  }
+}
+
 .footer {
-  padding: $gutter * 3;
+  position: fixed;
+  z-index: $indexFooter;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: ($gutter * 3) 0;
   @include media-breakpoint-up(sm) {
-    padding: $gutter * 10;
+    padding: ($gutter * 10) 0;
   }
   background-color: darken($primaryColor, 30%);
   text-align: center;

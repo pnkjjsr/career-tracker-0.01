@@ -1,0 +1,180 @@
+.access {
+  padding-top: $gutter * 3;
+
+  .intro {
+    position: relative;
+    max-width: $sm;
+    margin-bottom: $gutter * 4;
+
+    h2 {
+      margin-bottom: $gutter * 2;
+    }
+    p {
+      color: $textColorLight;
+      font-size: $fontSizeXL;
+      line-height: 140%;
+
+      span {
+        padding: $gutter/2 $gutter;
+        background-color: $yellow;
+        color: $textColor;
+        font-size: $fontSizeXL;
+        font-weight: $fontWeightBold;
+      }
+    }
+
+    .review {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      width: 430px;
+      height: 238px;
+      text-align: center;
+      transform: translate(140%, 0);
+
+      p {
+        color: $textColor;
+        font-size: $fontSizeH5;
+        font-weight: $fontWeightBold;
+      }
+      div {
+        font-size: $fontSizeXL;
+        font-weight: $fontWeightBold;
+        span {
+          font-weight: $fontWeight;
+        }
+      }
+    }
+  }
+
+  .features {
+    padding: ($gutter * 5) 0;
+    background-color: lighten($accentColor, 40%);
+
+    .title {
+      display: inline-block;
+      padding: $gutter;
+      background-color: $yellow;
+
+      &.col {
+        background-color: transparent;
+        color: $textColor;
+        font-weight: $fontWeightBold;
+      }
+    }
+
+    .imageCol {
+      display: flex;
+      align-items: flex-start;
+
+      figure {
+        margin-right: $gutter * 5;
+      }
+    }
+
+    p {
+      margin-bottom: $gutter * 5;
+      font-size: $fontSizeXL;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: auto auto;
+      max-width: $lg;
+
+      &.col {
+        grid-template-columns: auto;
+
+        li {
+          grid-template-rows: max-content;
+        }
+      }
+
+      li {
+        margin-bottom: $gutter * 2;
+        color: $textColorLight;
+        font-size: $fontSizeXL;
+      }
+    }
+  }
+
+  .action {
+    padding: ($gutter * 5) 0;
+    &.alignCenter {
+      text-align: center;
+    }
+
+    button {
+      @include btnPrimary();
+      width: auto;
+      height: auto;
+      margin-bottom: $gutter * 2;
+      padding: $gutter * 2 $gutter * 4;
+      font-size: $fontSizeXL;
+
+      small {
+        display: block;
+        margin-top: $gutter;
+        font-size: $fontSizeSmall;
+        font-weight: $fontWeight;
+      }
+    }
+
+    p {
+      color: $textColorLight;
+      font-size: $fontSizeXL;
+
+      a {
+        color: $textColor;
+      }
+    }
+  }
+
+  .loader {
+    padding: ($gutter * 5) 0;
+    text-align: center;
+
+    .bar {
+      margin-bottom: $gutter * 4;
+    }
+
+    .status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      figure {
+        margin-right: $gutter * 3;
+      }
+
+      p {
+        font-size: $fontSizeH5;
+        font-weight: $fontWeightBold;
+      }
+    }
+  }
+
+  .sold {
+    padding-top: $gutter * 5;
+    text-align: center;
+
+    .title {
+      margin-bottom: $gutter * 6;
+      font-weight: $fontWeightBold;
+
+      small {
+        display: block;
+        margin-top: $gutter * 2;
+        font-size: $fontSizeH4;
+      }
+    }
+
+    p {
+      max-width: $lg;
+      margin: auto;
+      color: $textColorLight;
+      font-size: $fontSizeH6;
+    }
+  }
+}

@@ -10,20 +10,26 @@ function Open(props) {
         <div className="container">Bloom At Work</div>
       </header>
 
-      {props.children}
+      <main className={`${s.main} ${props.page !== "home" && s.access}`}>
+        {props.children}
+      </main>
 
       <footer className={s.footer}>
-        <div class="container">
-          <h3 className={s.title}>
-            So are you ready to Bloom at your workplace and change your work
-            life?
-          </h3>
-          <p>
-            We only take a few members every week, so hurry and get your access
-            now
-          </p>
+        <div className="container">
+          {props.page === "home" && (
+            <>
+              <h3 className={s.title}>
+                So are you ready to Bloom at your workplace and change your work
+                life?
+              </h3>
+              <p>
+                We only take a few members every week, so hurry and get your
+                access now
+              </p>
 
-          <FormSubscribe />
+              <FormSubscribe />
+            </>
+          )}
 
           <div className={s.copy}>2022, Bloom At Work</div>
         </div>
