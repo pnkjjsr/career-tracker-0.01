@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: $indexHeader;
   padding: $gutter * 5;
   background-color: $white;
   color: $primaryColor;
@@ -24,13 +26,11 @@
   bottom: 0;
   width: 100%;
   padding: ($gutter * 3) 0;
-  @include media-breakpoint-up(sm) {
-    padding: ($gutter * 10) 0;
-  }
   background-color: darken($primaryColor, 30%);
   text-align: center;
 
   .title {
+    padding-top: $gutter * 10;
     color: $white;
     line-height: 120%;
     // @include media-breakpoint-up(sm) {

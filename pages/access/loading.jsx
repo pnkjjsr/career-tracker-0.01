@@ -51,18 +51,19 @@ function Pay() {
                   height="377"
                 />
               </figure>
-              <ul className={s.col}>
-                <li>
-                  <h5 className={`${s.title} ${s.col}`}>
-                    Get access to the E-Book every employee needs
-                  </h5>
-                </li>
-                <li>&#10003; Get noticed at work</li>
-                <li>&#10003; How to get that promotion</li>
-                <li>&#10003; HR approved pay hike tips</li>
-                <li>&#10003; Exceed your managers expectations</li>
-                <li>&#10003; Start enjoying office, stress free</li>
-              </ul>
+              <div>
+                <h5 className={`${s.title} ${s.col}`}>
+                  Get access to the E-Book every employee needs
+                </h5>
+
+                <ul className={s.col}>
+                  <li>Get noticed at work</li>
+                  <li>How to get that promotion</li>
+                  <li>HR approved pay hike tips</li>
+                  <li>Exceed your managers expectations</li>
+                  <li>Start enjoying office, stress free</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

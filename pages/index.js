@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <Layout page="home">
-        <main className={s.subscribe}>
+        <div className={s.subscribe}>
 
           <section className={s.features}>
             <div className={`container ${s.shine}`}>
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
 
           </section>
-        </main>
+        </div>
       </Layout>
     </div >
   )

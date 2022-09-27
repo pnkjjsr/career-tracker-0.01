@@ -45,12 +45,12 @@ function Pay() {
             </p>
 
             <ul>
-              <li>&#10003; Unlimited work profiles</li>
-              <li>&#10003; AI generated quarterly work portfolio</li>
-              <li>&#10003; Email support</li>
-              <li>&#10003; Dedicated dev for onboarding</li>
-              <li>&#10003; Multiple device support</li>
-              <li>&#10003; Access for 12 months</li>
+              <li>Unlimited work profiles</li>
+              <li>AI generated quarterly work portfolio</li>
+              <li>Email support</li>
+              <li>Dedicated dev for onboarding</li>
+              <li>Multiple device support</li>
+              <li>Access for 12 months</li>
             </ul>
           </div>
         </div>
