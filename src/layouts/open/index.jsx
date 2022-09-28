@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import s from "./style.module.scss";
 
 import FormSubscribe from "@/components/Forms/Subscribe";
@@ -7,7 +8,9 @@ function Open(props) {
   return (
     <>
       <header className={s.header}>
-        <div className="container">Bloom At Work</div>
+        <div className="container">
+          <Image src="/images/logo.jpg" alt="Bloom At Work" width="402" height="48" />
+        </div>
       </header>
 
       <main className={`${s.main} ${props.page !== "home" && s.access}`}>

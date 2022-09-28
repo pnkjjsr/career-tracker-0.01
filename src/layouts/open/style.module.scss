@@ -11,8 +11,11 @@
 .main {
   position: relative;
   z-index: $indexMain;
-  margin-bottom: $heightFooter;
+  margin-bottom: $heightFooterMob;
   background-color: $bgBody;
+  @include media-breakpoint-up(md) {
+    margin-bottom: $heightFooter;
+  }
 
   &.access {
     margin-bottom: $heightFooterSm;

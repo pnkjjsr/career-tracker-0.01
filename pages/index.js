@@ -37,7 +37,7 @@ export default function Home() {
               <h3 className={s.title}>The tool that every employee needs today</h3>
               <p>Imagine all the hard work you put in is neatly organized & beautifully presented at the time of your performance review</p>
               <figure>
-                <Image src="/images/tool.png" alt="Bloom at work tool" width="1140" height="445" />
+                <Image src="/images/tool.jpg" alt="Bloom at work tool" width="1036" height="544" />
               </figure>
 
               <h6>We only take limited members every week, hurry get your access now</h6>

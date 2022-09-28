@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -10,10 +10,48 @@ import s from "@/sections/access/style.module.scss";
 
 function Pay() {
   const router = useRouter();
+  const [load, setLoad] = useState(0);
+  const [fail, setFail] = useState(false);
 
   const handleSold = (e) => {
     e.prevenDefault;
     router.push("/access/sold");
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(30);
+    }, 1000);
+
+    setTimeout(() => {
+      setLoad(65);
+    }, 2000);
+
+    setTimeout(() => {
+      setLoad(80);
+    }, 3000);
+
+    setTimeout(() => {
+      setFail(true);
+    }, 4000);
+  }, []);
+
+  const renderAction = () => {
+    return (
+      <div className={`${s.action} ${s.alignCenter}`}>
+        <div className="container">
+          <button type="button" onClick={handleSold}>
+            Instant access to OUTSHINE AT WORK for $49 only
+          </button>
+
+          <p>
+            <Link href="/access/sold">
+              <a>No I don&apos;t want to outshine with this valuable E-book</a>
+            </Link>
+          </p>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -22,7 +60,7 @@ function Pay() {
         <div className="container">
           <div className={s.loader}>
             <div className={s.bar}>
-              <ProgressBar animated variant="success" now={75} />
+              <ProgressBar animated variant="success" now={load} />
             </div>
 
             <div className={s.status}>
@@ -39,6 +77,8 @@ function Pay() {
             </div>
           </div>
         </div>
+
+        {fail && renderAction()}
 
         <div className={s.features}>
           <div className="container">
@@ -68,21 +108,7 @@ function Pay() {
           </div>
         </div>
 
-        <div className={`${s.action} ${s.alignCenter}`}>
-          <div className="container">
-            <button type="button" onClick={handleSold}>
-              Instant access to OUTSHINE AT WORK for $49 only
-            </button>
-
-            <p>
-              <Link href="/access/sold">
-                <a>
-                  No I don&apos;t want to outshine with this valuable E-book
-                </a>
-              </Link>
-            </p>
-          </div>
-        </div>
+        {renderAction()}
       </div>
     </Layout>
   );
