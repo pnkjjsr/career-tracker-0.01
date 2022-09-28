@@ -92,8 +92,7 @@ function Subscribe() {
 
     setIsClick(true);
     setName(form.name);
-    router.push("/access/pay");
-    // post();
+    post();
   };
 
   const post = async () => {
