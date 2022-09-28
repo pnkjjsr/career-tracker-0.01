@@ -4,9 +4,26 @@
   form {
     margin-bottom: $gutter * 6;
 
-    input {
-      margin-right: $gutter;
+    .group {
+      display: inline-block;
       margin-bottom: $gutter * 2;
+      margin-right: $gutter;
+      vertical-align: top;
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+
+      input {
+        margin-bottom: $gutter/2;
+      }
+
+      small {
+        display: block;
+        margin-left: $gutter * 2;
+        color: $danger;
+        text-align: left;
+      }
     }
 
     button {

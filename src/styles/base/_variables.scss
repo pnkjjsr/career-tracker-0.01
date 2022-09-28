@@ -37,8 +37,9 @@ $textColorLighter: lighten($textColorLight, 30%);
 
 $white: #fff;
 $black: #000;
-$green: #00b94d;
-$yellow: #f8ff3e;
+$success: #00b94d;
+$warning: #f8ff3e;
+$danger: #dc3545;
 $gray: darken($white, 50%);
 $grayLight: lighten($black, 90%);
 $grayLighter: lighten($black, 95%);

@@ -22,7 +22,7 @@
 
       span {
         padding: $gutter/2 $gutter;
-        background-color: $yellow;
+        background-color: $warning;
         color: $textColor;
         font-size: $fontSizeXL;
         font-weight: $fontWeightBold;
@@ -68,7 +68,7 @@
     .title {
       display: inline-block;
       padding: $gutter;
-      background-color: $yellow;
+      background-color: $warning;
 
       &.col {
         background-color: transparent;
