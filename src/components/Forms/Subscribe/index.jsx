@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Spinner from "react-bootstrap/Spinner";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 import { db } from "@/libs/firebase";
 import {
@@ -87,8 +88,23 @@ function Subscribe() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const analytics = getAnalytics();
+
+    logEvent(analytics, "form-subscribe", {
+      element: "button",
+      action: "click",
+      stage: "first-click",
+    });
+
     let valid = handleSubmitValidation();
-    if (!valid) return;
+    if (!valid) {
+      logEvent(analytics, "form-subscribe", {
+        element: "button",
+        action: "click",
+        stage: "not-valid",
+      });
+      return;
+    }
 
     setIsClick(true);
     setName(form.name);
@@ -96,6 +112,7 @@ function Subscribe() {
   };
 
   const post = async () => {
+    const analytics = getAnalytics();
     const { type, email, name } = form;
 
     let postData = {
@@ -107,6 +124,12 @@ function Subscribe() {
 
     const docRef = await addDoc(collection(db, "subscribers"), postData);
     await updateDoc(doc(db, "subscribers", docRef.id), { id: docRef.id });
+
+    logEvent(analytics, "form-subscribe", {
+      element: "button",
+      action: "click",
+      stage: "data-saved",
+    });
 
     setForm({ email: "", name: "" });
     router.push("/access/pay");

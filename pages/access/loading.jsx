@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 import Layout from "@/layouts/open";
 
@@ -13,8 +14,24 @@ function Pay() {
   const [load, setLoad] = useState(0);
   const [fail, setFail] = useState(false);
 
-  const handleSold = (e) => {
+  const handleOutshine = (e) => {
     e.prevenDefault;
+    const analytics = getAnalytics();
+
+    if (e === "outshine") {
+      logEvent(analytics, "page-access-loading", {
+        element: "button",
+        action: "click",
+        stage: "outshine",
+      });
+    } else {
+      logEvent(analytics, "page-access-loading", {
+        element: "link",
+        action: "click",
+        stage: "no-outshine",
+      });
+    }
+
     router.push("/access/sold");
   };
 
@@ -40,13 +57,15 @@ function Pay() {
     return (
       <div className={`${s.action} ${s.alignCenter}`}>
         <div className="container">
-          <button type="button" onClick={handleSold}>
+          <button type="button" onClick={() => handleOutshine("outshine")}>
             Instant access to OUTSHINE AT WORK for $49 only
           </button>
 
           <p>
             <Link href="/access/sold">
-              <a>No I don&apos;t want to outshine with this valuable E-book</a>
+              <a onClick={() => handleOutshine("no-outshine")}>
+                No I don&apos;t want to outshine with this valuable E-book
+              </a>
             </Link>
           </p>
         </div>

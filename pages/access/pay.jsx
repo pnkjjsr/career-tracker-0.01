@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 import User from "@/contexts/user";
 import Layout from "@/layouts/open";
@@ -14,6 +15,13 @@ function Pay() {
 
   const handlePay = (e) => {
     e.prevenDefault;
+    const analytics = getAnalytics();
+
+    logEvent(analytics, "page-access-pay", {
+      element: "button",
+      action: "click",
+    });
+
     router.push("/access/loading");
   };
 
