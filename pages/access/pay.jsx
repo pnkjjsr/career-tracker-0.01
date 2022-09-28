@@ -1,12 +1,16 @@
 import React from "react";
 import { useRouter } from "next/router";
 
+import User from "@/contexts/user";
 import Layout from "@/layouts/open";
 
 import s from "@/sections/access/style.module.scss";
 
 function Pay() {
   const router = useRouter();
+  const {
+    state: { name },
+  } = User();
 
   const handlePay = (e) => {
     e.prevenDefault;
@@ -18,7 +22,7 @@ function Pay() {
       <div className={s.access}>
         <div className="container">
           <div className={s.intro}>
-            <h2>Name,</h2>
+            <h2>Name, {name}</h2>
             <p>
               Thanks for taking the <span>1st step</span> and deciding to invest
               in yourself.

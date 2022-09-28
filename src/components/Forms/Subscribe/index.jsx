@@ -12,12 +12,16 @@ import {
   where,
   getDocs,
 } from "firebase/firestore";
+import User from "@/contexts/user";
 
 import validation from "./validation";
 import s from "./style.module.scss";
 
 function Subscribe() {
   const router = useRouter();
+  const {
+    actions: { setName },
+  } = User();
   const [form, setForm] = useState({
     type: "",
     email: "",
@@ -87,7 +91,9 @@ function Subscribe() {
     if (!valid) return;
 
     setIsClick(true);
-    post();
+    setName(form.name);
+    router.push("/access/pay");
+    // post();
   };
 
   const post = async () => {

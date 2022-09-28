@@ -1,11 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
+import User from "@/contexts/user";
 import Layout from "@/layouts/open";
 
 import s from "@/sections/access/style.module.scss";
 
 function Pay() {
+  const {
+    state: { name },
+  } = User();
+
   return (
     <Layout page="access">
       <div className={s.access}>
@@ -19,7 +24,7 @@ function Pay() {
             />
 
             <h1 className={s.title}>
-              Sorry, Name
+              Sorry, {name}
               <small>Unfortunately, we are sold out.</small>
             </h1>
 
