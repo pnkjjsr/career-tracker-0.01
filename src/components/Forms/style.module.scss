@@ -1,8 +1,13 @@
 .form {
   display: inline-block;
+  text-align: center;
 
   form {
     margin-bottom: $gutter * 6;
+
+    &.m0 {
+      margin: 0;
+    }
 
     .group {
       display: inline-block;
@@ -26,10 +31,18 @@
       }
     }
 
+    .action {
+      margin-bottom: $gutter * 2;
+    }
+
     button {
       @include btnPrimary();
       display: block;
       margin: auto;
+    }
+
+    .error {
+      color: $danger;
     }
   }
 }

@@ -19,17 +19,9 @@ function Pay() {
     const analytics = getAnalytics();
 
     if (e === "outshine") {
-      logEvent(analytics, "page-access-loading", {
-        element: "button",
-        action: "click",
-        stage: "outshine",
-      });
+      logEvent(analytics, "outshine", "ebook page");
     } else {
-      logEvent(analytics, "page-access-loading", {
-        element: "link",
-        action: "click",
-        stage: "no-outshine",
-      });
+      logEvent(analytics, "not_outshine", "ebook page");
     }
 
     router.push("/access/sold");

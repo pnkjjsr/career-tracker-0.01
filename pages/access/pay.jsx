@@ -17,10 +17,7 @@ function Pay() {
     e.prevenDefault;
     const analytics = getAnalytics();
 
-    logEvent(analytics, "page-access-pay", {
-      element: "button",
-      action: "click",
-    });
+    logEvent(analytics, "$20_year", "step2");
 
     router.push("/access/loading");
   };

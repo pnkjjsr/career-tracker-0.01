@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+
+import LoginForm from "@/components/Forms/Login";
+
 import s from "./style.module.scss";
 
 import FormSubscribe from "@/components/Forms/Subscribe";
 
 function Open(props) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <Head>
@@ -30,7 +40,9 @@ function Open(props) {
             />
           </figure>
 
-          <div className={s.action}>Login</div>
+          <div className={s.action} onClick={handleShow}>
+            Login
+          </div>
         </div>
       </header>
 
@@ -58,6 +70,15 @@ function Open(props) {
           <div className={s.copy}>2022, Bloom At Work</div>
         </div>
       </footer>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Login</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <LoginForm />
+        </Modal.Body>
+      </Modal>
     </>
   );
 }
