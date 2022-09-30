@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import s from "./style.module.scss";
 
@@ -7,6 +8,17 @@ import FormSubscribe from "@/components/Forms/Subscribe";
 function Open(props) {
   return (
     <>
+      <Head>
+        <title>
+          Get the pay hike you deserve | Ace your performance review
+        </title>
+        <meta
+          name="description"
+          content="Get that promotion | Used by 5100+ employees in top US companies | Let your hard work be seen | The tool that every employee needs | Get access NOW"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <header className={s.header}>
         <div className="container">
           <figure className={s.logo}>

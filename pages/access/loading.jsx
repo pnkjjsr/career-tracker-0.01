@@ -57,7 +57,11 @@ function Pay() {
     return (
       <div className={`${s.action} ${s.alignCenter}`}>
         <div className="container">
-          <button type="button" onClick={() => handleOutshine("outshine")}>
+          <button
+            className={s.cart}
+            type="button"
+            onClick={() => handleOutshine("outshine")}
+          >
             <i>&#128722;</i>
 
             <span>Instant access to OUTSHINE AT WORK for $49 only</span>

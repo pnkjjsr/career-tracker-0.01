@@ -148,14 +148,17 @@
 
     button {
       @include btnPrimary();
-      display: flex;
-      align-items: center;
       width: auto;
       height: auto;
       margin: auto;
       margin-bottom: $gutter * 2;
       padding: $gutter * 2 $gutter * 3;
       font-size: $fontSizeXL;
+
+      &.cart {
+        display: flex;
+        align-items: center;
+      }
 
       i {
         display: flex;

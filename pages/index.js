@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from "next/image";
 
 import Layout from "@/layouts/open"
@@ -10,12 +9,6 @@ import s from '@/sections/index/style.module.scss'
 export default function Home() {
   return (
     <div className={s.container}>
-      <Head>
-        <title>Get the pay hike you deserve | Ace your performance review</title>
-        <meta name="description" content="Get that promotion | Used by 5100+ employees in top US companies | Let your hard work be seen | The tool that every employee needs | Get access NOW" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Layout page="home">
         <div className={s.subscribe}>
 
