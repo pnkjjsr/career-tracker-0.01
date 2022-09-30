@@ -17,10 +17,10 @@ function Pay() {
         <div className="container">
           <div className={s.sold}>
             <Image
-              src="/images/sold.jpg"
+              src="/images/ebook.jpg"
               alt="Sold Out"
-              width="319"
-              height="254"
+              width="502"
+                  height="377"
             />
 
             <h1 className={s.title}>

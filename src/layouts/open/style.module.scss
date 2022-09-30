@@ -1,11 +1,31 @@
 .header {
   position: relative;
   z-index: $indexHeader;
-  padding: $gutter * 5;
   background-color: $white;
   color: $primaryColor;
   font-size: $fontSizeXL;
   font-weight: $fontWeightBold;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    padding: $gutter;
+
+    .logo {
+      max-width: 200px;
+
+      @include media-breakpoint-up(md) {
+        max-width: 400px;
+      }
+    }
+
+    .action {
+      color: $textColorLight;
+      font-size: $fontSize;
+      font-weight: $fontWeight;
+      text-decoration: underline;
+    }
+  }
 }
 
 .main {

@@ -1,5 +1,5 @@
 .access {
-  padding-top: $gutter * 3;
+  padding-top: $gutter;
 
   .intro {
     position: relative;
@@ -12,13 +12,12 @@
     }
 
     h2 {
-      margin-bottom: $gutter * 2;
+      margin-bottom: $gutter;
     }
     p {
-      margin-bottom: $gutter * 5;
       color: $textColorLight;
       font-size: $fontSizeXL;
-      line-height: 140%;
+      line-height: 120%;
 
       span {
         padding: $gutter/2 $gutter;
@@ -30,6 +29,7 @@
     }
 
     .review {
+      display: none;
       text-align: center;
 
       @include media-breakpoint-up(md) {
@@ -58,10 +58,11 @@
   }
 
   .features {
-    padding: ($gutter * 5) 0;
+    padding: ($gutter * 2) 0;
     background-color: lighten($accentColor, 40%);
     text-align: center;
     @include media-breakpoint-up(md) {
+      padding: ($gutter * 5) 0;
       text-align: left;
     }
 
@@ -125,12 +126,16 @@
           margin-top: $gutter / 2;
           margin-right: $gutter;
         }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
 
   .action {
-    padding: ($gutter * 5) 0;
+    padding: ($gutter * 2) 0;
     text-align: center;
 
     @include media-breakpoint-up(md) {
@@ -143,17 +148,39 @@
 
     button {
       @include btnPrimary();
+      display: flex;
+      align-items: center;
       width: auto;
       height: auto;
+      margin: auto;
       margin-bottom: $gutter * 2;
-      padding: $gutter * 2 $gutter * 7;
+      padding: $gutter * 2 $gutter * 3;
       font-size: $fontSizeXL;
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        padding: $gutter;
+        background-color: $white;
+        border-radius: $borderRadius * 3;
+        font-size: $fontSizeXL;
+        font-style: normal;
+      }
+
+      span {
+        margin-left: $gutter * 2;
+        text-align: left;
+      }
 
       small {
         display: block;
         margin-top: $gutter;
         font-size: $fontSizeSmall;
         font-weight: $fontWeight;
+        line-height: 130%;
       }
     }
 
@@ -169,7 +196,7 @@
   }
 
   .loader {
-    padding: ($gutter * 5) 0;
+    padding: ($gutter * 2) 0;
     text-align: center;
 
     .bar {

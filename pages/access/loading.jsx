@@ -58,7 +58,9 @@ function Pay() {
       <div className={`${s.action} ${s.alignCenter}`}>
         <div className="container">
           <button type="button" onClick={() => handleOutshine("outshine")}>
-            Instant access to OUTSHINE AT WORK for $49 only
+            <i>&#128722;</i>
+
+            <span>Instant access to OUTSHINE AT WORK for $49 only</span>
           </button>
 
           <p>
@@ -92,15 +94,14 @@ function Pay() {
                 />
               </figure>
 
-              <p>Your order is not completed yet</p>
+              <p>Your order is not complete yet</p>
             </div>
           </div>
         </div>
 
-        {fail && renderAction()}
-
         <div className={s.features}>
           <div className="container">
+            <h3>Add this E-Book to cart</h3>
             <div className={s.imageCol}>
               <figure>
                 <Image

@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className={s.container}>
       <Head>
-        <title>Bloom At Work</title>
-        <meta name="description" content="Bloom At Work" />
+        <title>Get the pay hike you deserve | Ace your performance review</title>
+        <meta name="description" content="Get that promotion | Used by 5100+ employees in top US companies | Let your hard work be seen | The tool that every employee needs | Get access NOW" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -23,19 +23,32 @@ export default function Home() {
             <div className={`container ${s.shine}`}>
               <div className={`${s.content}`}>
                 <h1 className={s.title}>Shine at your workplace!</h1>
-                <p>Finally a productivity software tool for working professionals to showcase their work and get noticed at work</p>
+                <p>Finally a productivity software tool for working professionals to showcase their work and get noticed at work.</p>
 
                 <FormSubscribe />
               </div>
             </div>
-            <div className={s.strip}>Trusted by 5,000+ working professionals in USA</div>
+            <div className={s.strip}>
+              <p>
+                Trusted by 5,000+ working professionals in USA
+              </p>
+
+              <figure><Image src="/images/logo-google.png" alt="" width="49px" height="50px" /></figure>
+              <figure><Image src="/images/logo-amazon.png" alt="" width="49px" height="50px" /></figure>
+              <figure>
+                <Image src="/images/logo-mcdonalds.png" alt="" width="49px" height="50px" />
+              </figure>
+              <figure>
+                <Image src="/images/logo-disney.png" alt="" width="49px" height="50px" />
+              </figure>
+            </div>
           </section>
 
           <section className={`${s.features} ${s.alignCenter}`}>
             <div className={`container`}>
 
               <h3 className={s.title}>The tool that every employee needs today</h3>
-              <p>Imagine all the hard work you put in is neatly organized & beautifully presented at the time of your performance review</p>
+              <p>Imagine all the hard work you put in is neatly organized & beautifully presented at the time of your performance review.</p>
               <figure>
                 <Image src="/images/tool.jpg" alt="Bloom at work tool" width="1036" height="544" />
               </figure>
@@ -50,7 +63,7 @@ export default function Home() {
           <section className={`${s.features} ${s.alignCenter} ${s.perf}`}>
             <div className={`container ${s.perf}`}>
 
-              <h3 className={s.title}>Unlock the Tools that will Turn you into your a super performer!</h3>
+              <h3 className={s.title}>Unlock the Tools that will turn you into a super performer!</h3>
               <p>This tool has been designed in consultation with HR, managers leading large teams and head of IT firms. We have put everything that managers want to see in their team&apos;s work.</p>
 
               <ul>
@@ -61,7 +74,7 @@ export default function Home() {
               </ul>
 
               <div className={`${s.content}`}>
-                <h6>Invest in your self and change your work life for good</h6>
+                <h6>Invest in yourself and change your worklife for good</h6>
                 <FormSubscribe />
               </div>
             </div>

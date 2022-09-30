@@ -9,7 +9,16 @@ function Open(props) {
     <>
       <header className={s.header}>
         <div className="container">
-          <Image src="/images/logo.jpg" alt="Bloom At Work" width="402" height="48" />
+          <figure className={s.logo}>
+            <Image
+              src="/images/logo.jpg"
+              alt="Bloom At Work"
+              width="402"
+              height="48"
+            />
+          </figure>
+
+          <div className={s.action}>Login</div>
         </div>
       </header>
 

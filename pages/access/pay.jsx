@@ -30,7 +30,7 @@ function Pay() {
       <div className={s.access}>
         <div className="container">
           <div className={s.intro}>
-            <h2>Name, {name}</h2>
+            <h2>{name},</h2>
             <p>
               Thanks for taking the <span>1st step</span> and deciding to invest
               in yourself.
@@ -71,7 +71,11 @@ function Pay() {
           <div className="container">
             <button type="button" onClick={handlePay}>
               Get access $20/year
-              <small>Less than $2/month</small>
+              <small>
+                Less than $2/month
+                <br />
+                Cost less than a pizza
+              </small>
             </button>
 
             <p>100% safe payment, powered by stripe</p>
