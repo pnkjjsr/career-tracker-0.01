@@ -33,7 +33,7 @@ function Open(props) {
         <div className="container">
           <figure className={s.logo}>
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.svg"
               alt="Bloom At Work"
               width="402"
               height="48"
