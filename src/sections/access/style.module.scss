@@ -149,6 +149,10 @@
     button {
       @include btnPrimary();
       width: auto;
+      @include media-breakpoint-up(md) {
+        min-width: 400px;
+      }
+
       height: auto;
       margin: auto;
       margin-bottom: $gutter * 2;
