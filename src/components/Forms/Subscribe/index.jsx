@@ -88,13 +88,9 @@ function Subscribe() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const analytics = getAnalytics();
-
-    logEvent(analytics, "get_acess", { stage: "first-click" });
 
     let valid = handleSubmitValidation();
     if (!valid) {
-      logEvent(analytics, "get_acess", { stage: "not-valid" });
       return;
     }
 
