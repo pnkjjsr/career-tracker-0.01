@@ -19,9 +19,9 @@ function Pay() {
     const analytics = getAnalytics();
 
     if (e === "outshine") {
-      logEvent(analytics, "outshine", "ebook page");
+      logEvent(analytics, "outshine", {});
     } else {
-      logEvent(analytics, "not_outshine", "ebook page");
+      logEvent(analytics, "not_outshine", {});
     }
 
     router.push("/access/sold");
