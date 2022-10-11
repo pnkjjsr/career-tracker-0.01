@@ -90,11 +90,11 @@ function Subscribe() {
     e.preventDefault();
     const analytics = getAnalytics();
 
-    logEvent(analytics, "get_acess", "first-click");
+    logEvent(analytics, "get_acess", { stage: "first-click" });
 
     let valid = handleSubmitValidation();
     if (!valid) {
-      logEvent(analytics, "get_acess", "not-valid");
+      logEvent(analytics, "get_acess", { stage: "not-valid" });
       return;
     }
 
@@ -117,7 +117,7 @@ function Subscribe() {
     const docRef = await addDoc(collection(db, "subscribers"), postData);
     await updateDoc(doc(db, "subscribers", docRef.id), { id: docRef.id });
 
-    logEvent(analytics, "get_acess", "data-saved");
+    logEvent(analytics, "get_acess", { stage: "data-saved" });
 
     setForm({ email: "", name: "" });
     router.push("/access/pay");
